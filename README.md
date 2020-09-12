@@ -28,4 +28,5 @@ kwcore gh+/voxsoftware/packages/shide/0.0.2.kwa
 
 ## What can I do with Shide?
 
-///TODO
+- Make HTTP/HTTPS Web Requests [vfp.axios](https://github.com/FoxShell/vfp.axios)
+- The fastest JSON parser. See example: [examples/json.prg](examples/json.prg)
