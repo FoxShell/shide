@@ -8,7 +8,11 @@ NOTE: Works on VFP9 and in VFP10 Advanced (by cheng) 32/64 bits
 
 ### Without installation
 
-1. Download the file: [/FoxShell/packages/shide/0.0.3.app](https://raw.githubusercontent.com/FoxShell/packages/master/shide/0.0.3.app) and rename to ```shide.app``` 
+1. Download the file and rename to ```shide.app```:
+  - For 32 bits: [/FoxShell/packages/shide/0.0.3.x86.app](https://raw.githubusercontent.com/FoxShell/packages/master/shide/0.0.3.x86.app)
+  - For 64 bits: [/FoxShell/packages/shide/0.0.3.x64.app](https://raw.githubusercontent.com/FoxShell/packages/master/shide/0.0.3.x64.app)
+  
+  NOTE: You can run shide 64 bits versions within VFP9 32 bits. The VFP cpu architecture doesn't need match the shide cpu architecture.
 
 2. Add to your VFP project (or copy inside executable folder, like you prefer)
 
