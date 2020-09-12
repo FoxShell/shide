@@ -32,4 +32,5 @@ Shide is a multipurpose library. Extends VFP9 giving all the power of [kawix/cor
 
 - Make HTTP/HTTPS Web Requests [vfp.axios](https://github.com/FoxShell/vfp.axios)
 - Send emails using SMTP [vfpmailer](https://github.com/FoxShell/vfpmailer)
+- Create/Read zip files [admzip](https://github.com/FoxShell/admzip)
 - The fastest JSON parser. See example: [examples/json.prg](examples/json.prg)
