@@ -8,7 +8,7 @@ NOTE: Works on VFP9 and in VFP10 Advanced (by cheng) 32/64 bits
 
 ### Without installation
 
-1. Download the file: [/FoxShell/packages/shide/0.0.2.app](https://github.com/FoxShell/packages/blob/master/shide/0.0.2.app) and rename to ```shide.app``` 
+1. Download the file: [/FoxShell/packages/shide/0.0.2.app](https://raw.githubusercontent.com/FoxShell/packages/master/shide/0.0.2.app) and rename to ```shide.app``` 
 
 2. Add to your VFP project (or copy inside executable folder, like you prefer)
 
