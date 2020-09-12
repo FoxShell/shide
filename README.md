@@ -21,7 +21,6 @@ NOTE: Works on VFP9 and in VFP10 Advanced (by cheng) 32/64 bits
 
 ### With installation
 
-This steps will install the appropiate version 32/64 bits 
 
 1. Install [@kawix/core](https://github.com/kodhework/kawix/blob/master/core/INSTALL.md)
 
