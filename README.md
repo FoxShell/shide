@@ -31,4 +31,5 @@ kwcore gh+/FoxShell/packages/shide/0.0.3.kwa
 Shide is a multipurpose library. Extends VFP9 giving all the power of [kawix/core](https://github.com/kodhework/kawix). With a unique library you can do almost anything in VFP. If there is something harder to do native with VFP, then Shide is the solution. Here a list of current shide usages: 
 
 - Make HTTP/HTTPS Web Requests [vfp.axios](https://github.com/FoxShell/vfp.axios)
+- Send emails using SMTP [vfpmailer](https://github.com/FoxShell/vfpmailer)
 - The fastest JSON parser. See example: [examples/json.prg](examples/json.prg)
