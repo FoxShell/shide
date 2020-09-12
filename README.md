@@ -1,7 +1,7 @@
 # shide
 Shide is a library that exposes the power of [kawix/core](https://github.com/kodhework/kawix) to VFP9
 
-NOTE: Works on VFP9 and in VFP10 Advanced (by cheng) 32/64 bits
+NOTE: Works on VFP9 and in VFP10 Advanced (by cheng) 32/64 bits. Its know to work on windows7+.
 
 
 ## Import Shide in your project 
