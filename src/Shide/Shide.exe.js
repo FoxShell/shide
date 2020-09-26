@@ -1,6 +1,5 @@
 "use strict";
 
-var _iconvLite = _interopRequireDefault(require("0"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -49,8 +48,8 @@ var VFPProxy = function () {
 
       str.push("retorno= m." + r);
 
-      var b = _iconvLite.default.encode(str.join("\r\n"), 'latin1');
-
+      //var b = _iconvLite.default.encode(str.join("\r\n"), 'latin1');
+	  var b = Buffer.from(str.join("\r\n"))
       return b.toString('base64');
     }
   }, {
@@ -241,26 +240,3 @@ setInterval(function () {
   if (writeToCon) process.stdout.write(".\n");
 }, 12000);
 // kawi converted. Preserve this line, Kawi transpiler will not reprocess if this line found
-var ___kawi__async = 
-function (KModule, require, module){
-	var resolve, reject
-	var required= ["npm://iconv-lite@0.4.24"]
-	var num=1
-	var i=-1
-	var __load= function (value) {
-	if(arguments.length > 0) KModule._local.push(value);
-	i++
-	var mod = required[i]
-	if (!mod) return resolve()
-	var promise = KModule.import(mod, {
-		parent: KModule
-	})
-	if (promise && typeof promise.then == "function")
-		promise.then(__load).catch(reject)
-	else
-		__load(promise)
-}
-	var promise= new Promise(function(a,b){ resolve=a; reject=b; })
-	__load()
-	return promise
-}

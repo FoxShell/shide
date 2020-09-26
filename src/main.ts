@@ -24,11 +24,15 @@ function remove(path){
 
 function copy(src, dest){
 
+	//console.info(src,dest)
+
 	let stat = fs.statSync(src)
+	
 	if(stat.isDirectory()){
 		if(!fs.existsSync(dest)) fs.mkdirSync(dest)
 		let files = fs.readdirSync(src)
-		for(let i=0;i<files;i++){
+
+		for(let i=0;i<files.length;i++){
 			let file = Path.join(src, files[i])
 			let file1 = Path.join(dest, files[i])
 			copy(file, file1)
