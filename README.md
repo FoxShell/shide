@@ -6,20 +6,7 @@ NOTE: Works on VFP9 and in VFP10 Advanced (by cheng) 32/64 bits. Its know to wor
 
 ## Import Shide in your project 
 
-### Without installation
-
-1. Download the file and rename to ```shide.app```:
-  - For 32 bits: [/FoxShell/packages/shide/0.0.3.x86.app](https://raw.githubusercontent.com/FoxShell/packages/master/shide/0.0.3.x86.app)
-  - For 64 bits: [/FoxShell/packages/shide/0.0.3.x64.app](https://raw.githubusercontent.com/FoxShell/packages/master/shide/0.0.3.x64.app)
-  
-  NOTE: You can run shide 64 bits version within VFP9 32 bits. The VFP cpu architecture doesn't need match the shide cpu architecture.
-
-2. Add to your VFP project (or copy inside executable folder, like you prefer)
-
-3. In vfp code (at startup for example): ```do shide.app``` (the first time can take some time)
-
-
-### With installation
+### With installation (RECOMMENDED)
 
 
 1. Install [@kawix/core](https://github.com/kodhework/kawix/blob/master/core/INSTALL.md)
@@ -27,8 +14,21 @@ NOTE: Works on VFP9 and in VFP10 Advanced (by cheng) 32/64 bits. Its know to wor
 2. Execute on cmd: 
 
 ```
-kwcore gh+/FoxShell/packages/shide/0.0.3.kwa
+kwcore gh+/FoxShell/packages/shide/0.0.6.kwa
 ```
+
+### Without installation
+
+1. Download the file and rename to ```shide.app```:
+  - For 32 bits: [/FoxShell/packages/shide/0.0.6.x86.app](https://raw.githubusercontent.com/FoxShell/packages/master/shide/0.0.6.x86.app)
+  - For 64 bits: [/FoxShell/packages/shide/0.0.6.x64.app](https://raw.githubusercontent.com/FoxShell/packages/master/shide/0.0.6.x64.app)
+  
+  NOTE: You can run shide 64 bits version within VFP9 32 bits. The VFP cpu architecture doesn't need match the shide cpu architecture.
+
+2. Add to your VFP project (or copy inside executable folder, like you prefer)
+
+3. In vfp code (at startup for example): ```do shide.app``` (the first time can take some time)
+
 
 ## What can I do with Shide?
 

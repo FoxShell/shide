@@ -39,7 +39,78 @@ DEFINE CLASS NodeInterop as Custom
 		this._libs= CREATEOBJECT('collection')
 		this._beat= CREATEOBJECT('heartbeat')
 		
+		
+		
+		
 	ENDFUNC
+
+	function loadRemoteLibrary(url)
+		local num, id
+		id= "load.remote.1"
+		TRY 
+			num= _screen.nodeinterop._api.item[m.id]
+		CATCH TO ex 
+			num= "-1"
+		ENDTRY 
+
+
+		IF num == "-1"
+			_Screen.nodeinterop.connect()
+			TEXT TO m.code NOSHOW 
+			
+			async function module1(){
+				let os = await KModule.import("os")
+				let path = await KModule.import("path")
+				let fs = await KModule.import("fs")
+				let parts = params.split("|")
+				let name = parts[1]
+				let fileout = path.join(os.homedir(),"Kawix","Shide.lib", name + ".PRG")
+				let fileerr = path.join(os.homedir(),"Kawix","Shide.lib", name + ".ERR")
+				if(fs.existsSync(fileerr)){
+					fs.unlinkSync(fileout)
+					fs.unlinkSync(fileerr)
+				}
+				if(!fs.existsSync(fileout)){
+						
+					let url = parts[0]
+					if(url.startsWith("gh+")){
+						let reg = /gh\+\/([A-Za-z0-9]+)\/([A-Za-z0-9]+)(\@[A-Za-z0-9]+)?\/(.*)/i
+						let par = undefined;
+						url .replace(reg, function(_,owner,mod,version,file){
+							version = version || "master"
+							par = {owner,mod,version,file}
+						})
+						url = "https://raw.githubusercontent.com/" + par.owner + "/"+par.mod+"/"+par.version+"/" + par.file
+					}
+					
+					// download ?? 
+					let axios = await KModule.import("npm://axios@0.18.0")
+					let response = await axios({
+						method:'GET',
+						url,
+						responseType:'arraybuffer'
+					})
+					let content = Buffer.from(response.data)
+					fs.writeFileSync(fileout, content.toString('latin1'))					
+				}
+				return {
+					path: fileout,
+					name
+				}
+			}
+			return module1()
+			
+			
+			ENDTEXT
+			_Screen.nodeinterop.register(m.id, m.code)
+			num= _screen.nodeinterop._api.item[m.id]
+
+		ENDIF
+		oValue= _Screen.nodeinterop.execute(m.num, m.url, .t.)
+		return this.loadLibrary(oValue.name)
+
+	endfunc
+
 
 	FUNCTION loadLibrary(name)
 
