@@ -20,8 +20,8 @@ kwcore gh+/FoxShell/packages/shide/0.0.7.kwa
 ### Without installation
 
 1. Download the file and rename to ```shide.app```:
-  - For 32 bits: [/FoxShell/packages/shide/0.0.7.x86.app](https://raw.githubusercontent.com/FoxShell/packages/master/shide/0.0.6.x86.app)
-  - For 64 bits: [/FoxShell/packages/shide/0.0.7.x64.app](https://raw.githubusercontent.com/FoxShell/packages/master/shide/0.0.6.x64.app)
+  - For 32 bits: [/FoxShell/packages/shide/0.0.7.x86.app](https://raw.githubusercontent.com/FoxShell/packages/master/shide/0.0.7.x86.app)
+  - For 64 bits: [/FoxShell/packages/shide/0.0.7.x64.app](https://raw.githubusercontent.com/FoxShell/packages/master/shide/0.0.7.x64.app)
   
   NOTE: You can run shide 64 bits version within VFP9 32 bits. The VFP cpu architecture doesn't need match the shide cpu architecture.
 
